@@ -274,7 +274,7 @@ module.exports = {
     bot_name_prefix: "[AI] ", // This is prefixed before the bot's randomly chosen name.
 
     // The class that players and bots spawn as.
-    spawn_class: 'developer',
+    spawn_class: 'kronos',
 
     // How every entity regenerates their health.
     regenerate_tick: 100,
@@ -360,12 +360,12 @@ module.exports = {
     // Bosses
     enable_bosses: true,
     boss_control: false, // Allows players to control bosses like dominators and motherships.
-    boss_spawn_cooldown: 260, // The delay (in seconds) between boss spawns.
+    boss_spawn_cooldown: 45, // The delay (in seconds) between boss spawns.
     boss_spawn_delay: 6, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
     boss_types: [
         {
-            bosses: ['eliteDestroyer', 'eliteGunner', 'eliteSprayer', 'eliteBattleship', 'eliteSpawner'],
-            amount: [5, 5, 4, 2, 1], chance: 2, nameType: 'a',
+            bosses: ['kronos'],
+            amount: [1], chance: 1, nameType: 'a',
         },
         {
             bosses: ['roguePalisade'],
@@ -399,7 +399,7 @@ module.exports = {
     random_body_colors: false,
 
     // Room setup (don't change these unless you know what you're doing)
-    room_setup: ['room_default'],
+    room_setup: ['siege'],
     round_arena: false,
-    mode: 'ffa',
+    mode: 'siege',
 }
