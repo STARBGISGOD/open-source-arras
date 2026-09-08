@@ -399,7 +399,7 @@ module.exports = {
     random_body_colors: false,
 
     // Room setup (don't change these unless you know what you're doing)
-    room_setup: ['room_default],
+    room_setup: ['room_default'],
     round_arena: false,
     mode: 'ffa',
 }
