@@ -189,7 +189,7 @@ module.exports = {
         [1/50000, [
             [625, 'gem'], [125, 'shinyTriangle'], [25, 'shinySquare'], [5, 'shinyPentagon']//, [1, 'shinyHexagon']
         ]],
-        [1/1000000, [
+        [1/10, [
             [1296, 'jewel'], [216, 'legendaryTriangle'], [36, 'legendarySquare'], [6, 'legendaryPentagon']//, [1, 'legendaryHexagon']
         ]]
     ],
@@ -210,11 +210,11 @@ module.exports = {
     // Bosses
     enable_bosses: true,
     boss_control: false, // Allows players to control bosses like dominators and motherships.
-    boss_spawn_cooldown: 15, // The delay (in seconds) between boss spawns.
-    boss_spawn_delay: 6, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
+    boss_spawn_cooldown: 6, // The delay (in seconds) between boss spawns.
+    boss_spawn_delay: 3, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
     boss_types: [
         {
-            bosses: ['summoner'],
+            bosses: ['ragnarok'],
             amount: [1], chance: 1, nameType: 'a',
         },
         {
