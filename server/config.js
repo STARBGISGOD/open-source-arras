@@ -214,17 +214,17 @@ module.exports = {
     boss_spawn_delay: 3, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
     boss_types: [
         {
-            bosses: ['ragnarok'],
+            bosses: ['odin'],
             amount: [1], chance: 1, nameType: 'a',
         },
         {
             bosses: ['roguePalisade'],
-            amount: [4, 1], chance: 1, nameType: 'castle',
+            amount: [10], chance: 1, nameType: 'castle',
             message: 'A strange trembling...',
         },
         {
             bosses: ['eliteSkimmer', 'nestKeeper'],
-            amount: [2, 1], chance: 1, nameType: 'a',
+            amount: [20, 10], chance: 1, nameType: 'a',
             message: 'A strange trembling...',
         },
         /*{
