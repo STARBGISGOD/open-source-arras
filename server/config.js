@@ -65,8 +65,8 @@ module.exports = {
     allow_ACAO: false, // Access-Control-Allow-Origin, allows any server/client to access data from the WebServer.
 
     // Map
-    map_tile_width: 420,
-    map_tile_height: 420,
+    map_tile_width: 320,
+    map_tile_height: 320,
 
     // The message that appears once a player spawns.
     spawn_message: "You have spawned! Welcome to the game.\n"
@@ -84,7 +84,7 @@ module.exports = {
 
     // Gameplay
     game_speed: 1, // General game speed.
-    run_speed: 1.5, // General multiplier for acceleration and max speeds.
+    run_speed: 2, // General multiplier for acceleration and max speeds.
     max_heartbeat_interval: 300_000, // How long (in milliseconds) a socket can be disconnected before their tank self-destructs.
     respawn_delay: 0, // How long (in seconds) you have to wait to respawn. Set to 0 to disable.
 
@@ -92,7 +92,7 @@ module.exports = {
     upgrade_delay_reminder: 20_000, // How often (in milliseconds) you will be reminded to stay still and not shoot to upgrade outside of a base if you haven't upgraded yet.
 
     bullet_spawn_offset: 1, // Where the bullet spawns, where 1 is fully outside the barrel and -1 is fully inside the barrel, and 0 is halfway between.
-    damage_multiplier: 1, // General damage multiplier everytime damage is dealt.
+    damage_multiplier: 4, // General damage multiplier everytime damage is dealt.
     knockback_multiplier: 1.1, // General knockback multiplier everytime knockback is applied.
     glass_health_factor: 2, // TODO: Figure out how the math behind this works.
     room_bound_force: 0.01,// How strong the force is that confines entities to the map and portals apply to entities.
