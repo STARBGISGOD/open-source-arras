@@ -124,10 +124,10 @@ module.exports = {
     bot_name_prefix: "[AI] ", // This is prefixed before the bot's randomly chosen name.
 
     // The class that players and bots spawn as.
-    spawn_class: 'kronos',
+    spawn_class: 'anum',
 
     // How every entity regenerates their health.
-    regenerate_tick: 100,
+    regenerate_tick: 10,
 
     // Food
     enable_food: true, // Allows food to spawn.
@@ -219,12 +219,12 @@ module.exports = {
         },
         {
             bosses: ['roguePalisade'],
-            amount: [10], chance: 1, nameType: 'castle',
+            amount: [4], chance: 1, nameType: 'castle',
             message: 'A strange trembling...',
         },
         {
             bosses: ['eliteSkimmer', 'nestKeeper'],
-            amount: [20, 10], chance: 1, nameType: 'a',
+            amount: [4, 4], chance: 1, nameType: 'a',
             message: 'A strange trembling...',
         },
         /*{
