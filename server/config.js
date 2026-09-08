@@ -364,7 +364,7 @@ module.exports = {
     boss_spawn_delay: 6, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
     boss_types: [
         {
-            bosses: ['kronos'],
+            bosses: ['summoner'],
             amount: [1], chance: 1, nameType: 'a',
         },
         {
@@ -373,8 +373,8 @@ module.exports = {
             message: 'A strange trembling...',
         },
         {
-            bosses: ['summoner', 'eliteSkimmer', 'nestKeeper'],
-            amount: [2, 2, 1], chance: 1, nameType: 'a',
+            bosses: ['eliteSkimmer', 'nestKeeper'],
+            amount: [2, 1], chance: 1, nameType: 'a',
             message: 'A strange trembling...',
         },
         /*{
@@ -401,5 +401,5 @@ module.exports = {
     // Room setup (don't change these unless you know what you're doing)
     room_setup: ['room_default],
     round_arena: false,
-    mode: 'siege',
+    mode: 'ffa',
 }
