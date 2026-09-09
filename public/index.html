@@ -526,38 +526,7 @@
         <script type="module" src="./client/socketinit.js"></script>
         <script type="module" src="./client/color.js"></script>
         <script type="module" src="./client/serverSelectorHandler.js"></script>
-        <script type="module" src="./client/keybindsHandler.js"></script>
-            <!-- Mobile Dev Touch Overlay -->
-<div id="mobileDevMenu" style="position: fixed; top: 10px; right: 10px; z-index: 99999; display: flex; flex-wrap: wrap; gap: 6px; max-width: 280px; justify-content: flex-end;">
-  <button onclick="pressCode('Backslash')" style="padding: 6px 10px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #555; border-radius: 6px; font-weight: bold; font-size: 12px;">Level (\)</button>
-  <button onclick="pressCode('KeyP')" style="padding: 6px 10px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #555; border-radius: 6px; font-weight: bold; font-size: 12px;">Zoom (P)</button>
-  <button onclick="pressCode('Quote')" style="padding: 6px 10px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #555; border-radius: 6px; font-weight: bold; font-size: 12px;">Tank (')</button>
-  <button onclick="comboCode('KeyA', 'KeyR')" style="padding: 6px 10px; background: rgba(220,50,50,0.85); color: #fff; border: 1px solid #888; border-radius: 6px; font-weight: bold; font-size: 12px;">No Recoil</button>
-  <button onclick="comboCode('KeyA', 'KeyC')" style="padding: 6px 10px; background: rgba(50,180,50,0.85); color: #fff; border: 1px solid #888; border-radius: 6px; font-weight: bold; font-size: 12px;">No Cooldown</button>
-  <button onclick="sendChat()" style="padding: 6px 10px; background: rgba(0,150,255,0.85); color: #fff; border: 1px solid #888; border-radius: 6px; font-weight: bold; font-size: 12px;">Send Chat</button>
-</div>
-
-<script>
-  function pressCode(codeStr) {
-    window.dispatchEvent(new KeyboardEvent('keydown', { code: codeStr, bubbles: true }));
-    setTimeout(() => {
-      window.dispatchEvent(new KeyboardEvent('keyup', { code: codeStr, bubbles: true }));
-    }, 50);
-  }
-
-  function comboCode(code1, code2) {
-    window.dispatchEvent(new KeyboardEvent('keydown', { code: code1, bubbles: true }));
-    window.dispatchEvent(new KeyboardEvent('keydown', { code: code2, bubbles: true }));
-    setTimeout(() => {
-      window.dispatchEvent(new KeyboardEvent('keyup', { code: code2, bubbles: true }));
-      window.dispatchEvent(new KeyboardEvent('keyup', { code: code1, bubbles: true }));
-    }, 100);
-  }
-
-  function sendChat() {
-    window.dispatchEvent(new KeyboardEvent('keydown', { code: 'Enter', key: 'Enter', keyCode: 13, bubbles: true }));
-  }
-</script>
+        <script type="module" src="./client/keybindsHandler.js"></script>      
 
     </body>
 </html>
