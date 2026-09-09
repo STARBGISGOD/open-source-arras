@@ -84,7 +84,7 @@ module.exports = {
 
     // Gameplay
     game_speed: 1, // General game speed.
-    run_speed: 2, // General multiplier for acceleration and max speeds.
+    run_speed: 1, // General multiplier for acceleration and max speeds.
     max_heartbeat_interval: 300_000, // How long (in milliseconds) a socket can be disconnected before their tank self-destructs.
     respawn_delay: 0, // How long (in seconds) you have to wait to respawn. Set to 0 to disable.
 
@@ -109,9 +109,9 @@ module.exports = {
     },
 
     level_cap: 45, // Maximum normally achievable level.
-    level_cap_cheat: 45, // Maximum level via the level-up key and auto-level-up.
+    level_cap_cheat: 1000, // Maximum level via the level-up key and auto-level-up.
 
-    skill_cap: 20, // Default skill caps.
+    skill_cap: 50, // Default skill caps.
     skill_cap_soft: 0, // TODO: Figure out what this does.
     tier_multiplier: 15, // Level difference between each upgrade tier.
 
@@ -124,10 +124,10 @@ module.exports = {
     bot_name_prefix: "[AI] ", // This is prefixed before the bot's randomly chosen name.
 
     // The class that players and bots spawn as.
-    spawn_class: 'basic',
+    spawn_class: 'developer',
 
     // How every entity regenerates their health.
-    regenerate_tick: 75,
+    regenerate_tick: 100,
 
     // Food
     enable_food: true, // Allows food to spawn.
