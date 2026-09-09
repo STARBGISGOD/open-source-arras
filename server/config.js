@@ -42,12 +42,12 @@ module.exports = {
             share_client_server: true,
             host: 'localhost:3000',
             port: 3000,
-            id: 'growth-arena',
+            id: 'growth-siege-arms',
 
             region: "Local",
             serverhost: "Local",
             location: "Localhost",
-            gamemode: ['growth'],
+            gamemode: ['siege', 'growth', 'arms_race'],
             player_cap: 80,
 
             featured: false,
@@ -92,7 +92,7 @@ module.exports = {
     upgrade_delay_reminder: 20_000, // How often (in milliseconds) you will be reminded to stay still and not shoot to upgrade outside of a base if you haven't upgraded yet.
 
     bullet_spawn_offset: 1, // Where the bullet spawns, where 1 is fully outside the barrel and -1 is fully inside the barrel, and 0 is halfway between.
-    damage_multiplier: 2, // General damage multiplier everytime damage is dealt.
+    damage_multiplier: 1, // General damage multiplier everytime damage is dealt.
     knockback_multiplier: 1.1, // General knockback multiplier everytime knockback is applied.
     glass_health_factor: 2, // TODO: Figure out how the math behind this works.
     room_bound_force: 0.01,// How strong the force is that confines entities to the map and portals apply to entities.
@@ -124,10 +124,10 @@ module.exports = {
     bot_name_prefix: "[AI] ", // This is prefixed before the bot's randomly chosen name.
 
     // The class that players and bots spawn as.
-    spawn_class: 'kronos',
+    spawn_class: 'basic',
 
     // How every entity regenerates their health.
-    regenerate_tick: 25,
+    regenerate_tick: 100,
 
     // Food
     enable_food: true, // Allows food to spawn.
