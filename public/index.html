@@ -529,59 +529,34 @@
         <script type="module" src="./client/keybindsHandler.js"></script>
             <!-- Mobile Dev Touch Overlay -->
 <div id="mobileDevMenu" style="position: fixed; top: 10px; right: 10px; z-index: 99999; display: flex; flex-wrap: wrap; gap: 6px; max-width: 280px; justify-content: flex-end;">
-  <button onclick="triggerKey(220, '\\')" style="padding: 6px 10px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #555; border-radius: 6px; font-weight: bold; font-size: 12px;">
-    Level (\)
-  </button>
-  <button onclick="triggerKey(80, 'p')" style="padding: 6px 10px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #555; border-radius: 6px; font-weight: bold; font-size: 12px;">
-    Zoom (P)
-  </button>
-  <button onclick="triggerKey(222, '\'')" style="padding: 6px 10px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #555; border-radius: 6px; font-weight: bold; font-size: 12px;">
-    Tank (')
-  </button>
-  <button onclick="triggerCombo(65, 'a', 82, 'r')" style="padding: 6px 10px; background: rgba(220,50,50,0.85); color: #fff; border: 1px solid #888; border-radius: 6px; font-weight: bold; font-size: 12px;">
-    No Recoil
-  </button>
-  <button onclick="triggerCombo(65, 'a', 67, 'c')" style="padding: 6px 10px; background: rgba(50,180,50,0.85); color: #fff; border: 1px solid #888; border-radius: 6px; font-weight: bold; font-size: 12px;">
-    No Cooldown
-  </button>
+  <button onclick="pressCode('Backslash')" style="padding: 6px 10px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #555; border-radius: 6px; font-weight: bold; font-size: 12px;">Level (\)</button>
+  <button onclick="pressCode('KeyP')" style="padding: 6px 10px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #555; border-radius: 6px; font-weight: bold; font-size: 12px;">Zoom (P)</button>
+  <button onclick="pressCode('Quote')" style="padding: 6px 10px; background: rgba(0,0,0,0.8); color: #fff; border: 1px solid #555; border-radius: 6px; font-weight: bold; font-size: 12px;">Tank (')</button>
+  <button onclick="comboCode('KeyA', 'KeyR')" style="padding: 6px 10px; background: rgba(220,50,50,0.85); color: #fff; border: 1px solid #888; border-radius: 6px; font-weight: bold; font-size: 12px;">No Recoil</button>
+  <button onclick="comboCode('KeyA', 'KeyC')" style="padding: 6px 10px; background: rgba(50,180,50,0.85); color: #fff; border: 1px solid #888; border-radius: 6px; font-weight: bold; font-size: 12px;">No Cooldown</button>
+  <button onclick="sendChat()" style="padding: 6px 10px; background: rgba(0,150,255,0.85); color: #fff; border: 1px solid #888; border-radius: 6px; font-weight: bold; font-size: 12px;">Send Chat</button>
 </div>
 
 <script>
-  // Helper for single dev keys
-  function triggerKey(keyCode, key) {
-    document.dispatchEvent(new KeyboardEvent('keydown', { keyCode, key, bubbles: true }));
+  function pressCode(codeStr) {
+    window.dispatchEvent(new KeyboardEvent('keydown', { code: codeStr, bubbles: true }));
     setTimeout(() => {
-      document.dispatchEvent(new KeyboardEvent('keyup', { keyCode, key, bubbles: true }));
+      window.dispatchEvent(new KeyboardEvent('keyup', { code: codeStr, bubbles: true }));
     }, 50);
   }
 
-  // Helper for dual attribute keys (Holds A + presses target key)
-  function triggerCombo(k1Code, k1, k2Code, k2) {
-    document.dispatchEvent(new KeyboardEvent('keydown', { keyCode: k1Code, key: k1, bubbles: true }));
-    document.dispatchEvent(new KeyboardEvent('keydown', { keyCode: k2Code, key: k2, bubbles: true }));
+  function comboCode(code1, code2) {
+    window.dispatchEvent(new KeyboardEvent('keydown', { code: code1, bubbles: true }));
+    window.dispatchEvent(new KeyboardEvent('keydown', { code: code2, bubbles: true }));
     setTimeout(() => {
-      document.dispatchEvent(new KeyboardEvent('keyup', { keyCode: k2Code, key: k2, bubbles: true }));
-      document.dispatchEvent(new KeyboardEvent('keyup', { keyCode: k1Code, key: k1, bubbles: true }));
+      window.dispatchEvent(new KeyboardEvent('keyup', { code: code2, bubbles: true }));
+      window.dispatchEvent(new KeyboardEvent('keyup', { code: code1, bubbles: true }));
     }, 100);
   }
 
-  // Mobile Android "Go" / Enter Chat Submission Fix
-  window.addEventListener('load', () => {
-    const checkChat = setInterval(() => {
-      const chatInput = document.getElementById('chatInput');
-      if (chatInput) {
-        clearInterval(checkChat);
-        chatInput.addEventListener('keyup', (event) => {
-          if (event.key === 'Enter' || event.keyCode === 13) {
-            chatInput.dispatchEvent(new KeyboardEvent('keydown', { keyCode: 13, key: 'Enter', bubbles: true }));
-          }
-        });
-        chatInput.addEventListener('change', () => {
-          chatInput.dispatchEvent(new KeyboardEvent('keydown', { keyCode: 13, key: 'Enter', bubbles: true }));
-        });
-      }
-    }, 500);
-  });
+  function sendChat() {
+    window.dispatchEvent(new KeyboardEvent('keydown', { code: 'Enter', key: 'Enter', keyCode: 13, bubbles: true }));
+  }
 </script>
 
     </body>
