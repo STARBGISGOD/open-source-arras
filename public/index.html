@@ -527,5 +527,29 @@
         <script type="module" src="./client/color.js"></script>
         <script type="module" src="./client/serverSelectorHandler.js"></script>
         <script type="module" src="./client/keybindsHandler.js"></script>
+            <script>
+  // Mobile Android "Go" / Enter Chat Submission Fix
+  window.addEventListener('load', () => {
+    const checkChat = setInterval(() => {
+      const chatInput = document.getElementById('chatInput');
+      if (chatInput) {
+        clearInterval(checkChat);
+        
+        // Listen for mobile form submit / action button (Go/Done)
+        chatInput.addEventListener('keyup', (event) => {
+          if (event.key === 'Enter' || event.keyCode === 13) {
+            chatInput.dispatchEvent(new KeyboardEvent('keydown', { keyCode: 13, key: 'Enter', bubbles: true }));
+          }
+        });
+
+        // Trigger on mobile keyboard focus loss ("Go" tap)
+        chatInput.addEventListener('change', () => {
+          chatInput.dispatchEvent(new KeyboardEvent('keydown', { keyCode: 13, key: 'Enter', bubbles: true }));
+        });
+      }
+    }, 500);
+  });
+</script>
+
     </body>
 </html>
