@@ -42,12 +42,12 @@ module.exports = {
             share_client_server: true,
             host: 'localhost:3000',
             port: 3000,
-            id: 'growth-siege-arms',
+            id: 'siege-fortress-arena',
 
             region: "Local",
             serverhost: "Local",
             location: "Localhost",
-            gamemode: ['siege', 'growth', 'arms_race'],
+            gamemode: ['siege_fortress', 'growth', 'arms_race'],
             player_cap: 80,
 
             featured: false,
@@ -127,7 +127,7 @@ module.exports = {
     spawn_class: 'basic',
 
     // How every entity regenerates their health.
-    regenerate_tick: 100,
+    regenerate_tick: 75,
 
     // Food
     enable_food: true, // Allows food to spawn.
@@ -208,7 +208,7 @@ module.exports = {
     ],
 
     // Bosses
-    enable_bosses: true,
+    enable_bosses: false,
     boss_control: false, // Allows players to control bosses like dominators and motherships.
     boss_spawn_cooldown: 6, // The delay (in seconds) between boss spawns.
     boss_spawn_delay: 3, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
