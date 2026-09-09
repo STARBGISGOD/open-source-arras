@@ -47,7 +47,7 @@ module.exports = {
             region: "Local",
             serverhost: "Local",
             location: "Localhost",
-            gamemode: ['siege_fortress', 'growth', 'arms_race'],
+            gamemode: ['siege_blitz', 'growth', 'arms_race'],
             player_cap: 80,
 
             featured: false,
@@ -65,8 +65,8 @@ module.exports = {
     allow_ACAO: false, // Access-Control-Allow-Origin, allows any server/client to access data from the WebServer.
 
     // Map
-    map_tile_width: 320,
-    map_tile_height: 320,
+    map_tile_width: 250,
+    map_tile_height: 250,
 
     // The message that appears once a player spawns.
     spawn_message: "You have spawned! Welcome to the game.\n"
@@ -130,7 +130,7 @@ module.exports = {
     regenerate_tick: 100,
 
     // Food
-    enable_food: true, // Allows food to spawn.
+    enable_food: false, // Allows food to spawn.
     food_cap: 70, // Maximum number of regular food at any time.
     food_cap_nest: 15, // Maximum number of nest food at any time.
     enemy_cap_nest: 10, // Maximum number of enemy nest food at any time.
