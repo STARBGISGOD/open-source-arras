@@ -109,7 +109,7 @@ module.exports = {
     },
 
     level_cap: 45, // Maximum normally achievable level.
-    level_cap_cheat: 45, // Maximum level via the level-up key and auto-level-up.
+    level_cap_cheat: 300, // Maximum level via the level-up key and auto-level-up.
 
     skill_cap: 50, // Default skill caps.
     skill_cap_soft: 0, // TODO: Figure out what this does.
