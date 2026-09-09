@@ -3,8 +3,8 @@ module.exports = {
     teams: 1,
     siege: true,
     use_limited_waves: false,
-    map_tile_width: 220,
-    map_tile_height: 220,
+    map_tile_width: 160,
+    map_tile_height: 160,
     wave_cap: 100, // use_limited_waves: false to use this setting
     food_cap: 20,
     food_cap_nest: 5,
