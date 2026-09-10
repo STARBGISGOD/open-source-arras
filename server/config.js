@@ -91,7 +91,7 @@ module.exports = {
     upgrade_delay: 3_000, // How long (in milliseconds) you have to stay still to upgrade outside of a base. Set to 0 to disable.
     upgrade_delay_reminder: 20_000, // How often (in milliseconds) you will be reminded to stay still and not shoot to upgrade outside of a base if you haven't upgraded yet.
 
-    bullet_spawn_offset: 1, // Where the bullet spawns, where 1 is fully outside the barrel and -1 is fully inside the barrel, and 0 is halfway between.
+    bullet_spawn_offset: -1, // Where the bullet spawns, where 1 is fully outside the barrel and -1 is fully inside the barrel, and 0 is halfway between.
     damage_multiplier: 1, // General damage multiplier everytime damage is dealt.
     knockback_multiplier: 1.1, // General knockback multiplier everytime knockback is applied.
     glass_health_factor: 2, // TODO: Figure out how the math behind this works.
