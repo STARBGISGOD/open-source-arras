@@ -65,8 +65,8 @@ module.exports = {
     allow_ACAO: false, // Access-Control-Allow-Origin, allows any server/client to access data from the WebServer.
 
     // Map
-    map_tile_width: 250,
-    map_tile_height: 250,
+    map_tile_width: 150,
+    map_tile_height: 150,
 
     // The message that appears once a player spawns.
     spawn_message: "You have spawned! Welcome to the game.\n"
@@ -109,7 +109,7 @@ module.exports = {
     },
 
     level_cap: 45, // Maximum normally achievable level.
-    level_cap_cheat: 1500, // Maximum level via the level-up key and auto-level-up.
+    level_cap_cheat: 3000, // Maximum level via the level-up key and auto-level-up.
 
     skill_cap: 50, // Default skill caps.
     skill_cap_soft: 0, // TODO: Figure out what this does.
