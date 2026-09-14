@@ -109,7 +109,7 @@ module.exports = {
     },
 
     level_cap: 45, // Maximum normally achievable level.
-    level_cap_cheat: 200, // Maximum level via the level-up key and auto-level-up.
+    level_cap_cheat: 45, // Maximum level via the level-up key and auto-level-up.
 
     skill_cap: 50, // Default skill caps.
     skill_cap_soft: 0, // TODO: Figure out what this does.
@@ -124,7 +124,7 @@ module.exports = {
     bot_name_prefix: "[AI] ", // This is prefixed before the bot's randomly chosen name.
 
     // The class that players and bots spawn as.
-    spawn_class: 'developer',
+    spawn_class: 'kronos',
 
     // How every entity regenerates their health.
     regenerate_tick: 100,
@@ -210,8 +210,8 @@ module.exports = {
     // Bosses
     enable_bosses: true,
     boss_control: false, // Allows players to control bosses like dominators and motherships.
-    boss_spawn_cooldown: 6, // The delay (in seconds) between boss spawns.
-    boss_spawn_delay: 3, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
+    boss_spawn_cooldown: 3, // The delay (in seconds) between boss spawns.
+    boss_spawn_delay: 1, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
     boss_types: [
         {
             bosses: ['odin'],
@@ -219,12 +219,12 @@ module.exports = {
         },
         {
             bosses: ['roguePalisade'],
-            amount: [4], chance: 1, nameType: 'castle',
+            amount: [4], chance: 1.01, nameType: 'castle',
             message: 'A strange trembling...',
         },
         {
             bosses: ['eliteSkimmer', 'nestKeeper'],
-            amount: [4, 4], chance: 1, nameType: 'a',
+            amount: [4, 4], chance: 0.01, nameType: 'a',
             message: 'A strange trembling...',
         },
         /*{
