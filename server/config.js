@@ -109,7 +109,7 @@ module.exports = {
     },
 
     level_cap: 45, // Maximum normally achievable level.
-    level_cap_cheat: 300, // Maximum level via the level-up key and auto-level-up.
+    level_cap_cheat: 200, // Maximum level via the level-up key and auto-level-up.
 
     skill_cap: 50, // Default skill caps.
     skill_cap_soft: 0, // TODO: Figure out what this does.
@@ -208,7 +208,7 @@ module.exports = {
     ],
 
     // Bosses
-    enable_bosses: false,
+    enable_bosses: true,
     boss_control: false, // Allows players to control bosses like dominators and motherships.
     boss_spawn_cooldown: 6, // The delay (in seconds) between boss spawns.
     boss_spawn_delay: 3, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
