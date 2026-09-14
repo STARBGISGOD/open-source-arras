@@ -9,7 +9,7 @@ module.exports = {
     food_cap: 0,
     food_cap_nest: 0,
     room_setup: ["room_siege_blitz"],
-    sanctuary_size: 30,
+    sanctuary_size: 50,
     blitz: true,
     bot_xp_gain: 500,
     maze_type: 13,
