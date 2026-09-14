@@ -1,4 +1,4 @@
-let calculatePoints = wave => 5 + wave * 3;
+let calculatePoints = wave => 5 + wave * 5;
 // Each wave has a certain amount of "points" that it can spend on bosses, calculated above.
 // Each boss costs an amount of points.
 // It will always buy as many bosses until it has no points or else can't spend them.
@@ -136,7 +136,7 @@ class Siege {
         this.gameActive = false;
         this.timer = 0;
         this.remainingEnemies = 0;
-        this.sanctuaryTier = 1;
+        this.sanctuaryTier = 3;
         this.sanctuaries = [];
         this.leftSanctuaries = 0;
     }
