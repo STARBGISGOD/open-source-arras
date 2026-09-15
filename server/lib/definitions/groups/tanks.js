@@ -9866,7 +9866,7 @@ Class.antiTankMachineGun = {
         SPEED: 2,
         ACCELERATION: 0.8,
         HEALTH: 1e99,
-        DAMAGE: 6,
+        DAMAGE: 1e50,
         PENETRATION: 0.25,
         FOV: 1.35,
         PUSHABILITY: 0,
