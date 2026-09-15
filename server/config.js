@@ -91,11 +91,11 @@ module.exports = {
     upgrade_delay: 3_000, // How long (in milliseconds) you have to stay still to upgrade outside of a base. Set to 0 to disable.
     upgrade_delay_reminder: 20_000, // How often (in milliseconds) you will be reminded to stay still and not shoot to upgrade outside of a base if you haven't upgraded yet.
 
-    bullet_spawn_offset: 0, // Where the bullet spawns, where 1 is fully outside the barrel and -1 is fully inside the barrel, and 0 is halfway between.
+    bullet_spawn_offset: 1, // Where the bullet spawns, where 1 is fully outside the barrel and -1 is fully inside the barrel, and 0 is halfway between.
     damage_multiplier: 1, // General damage multiplier everytime damage is dealt.
     knockback_multiplier: 1.1, // General knockback multiplier everytime knockback is applied.
     glass_health_factor: 2, // TODO: Figure out how the math behind this works.
-    room_bound_force: 0.01,// How strong the force is that confines entities to the map and portals apply to entities.
+    room_bound_force: 1,// How strong the force is that confines entities to the map and portals apply to entities.
     soft_max_skill: 0.59, // TODO: Find out what the intention behind the implementation of this configuration is.
 
     mothership_time_limit: 0, // How long (in milliseconds) a player can have in control of their team's mothership. Set to 0 to disable.
@@ -124,7 +124,7 @@ module.exports = {
     bot_name_prefix: "[AI] ", // This is prefixed before the bot's randomly chosen name.
 
     // The class that players and bots spawn as.
-    spawn_class: 'nemesis',
+    spawn_class: 'bob',
 
     // How every entity regenerates their health.
     regenerate_tick: 100,
@@ -219,7 +219,7 @@ module.exports = {
         },
         {
             bosses: ['roguePalisade'],
-            amount: [4], chance: 1.01, nameType: 'castle',
+            amount: [4], chance: 0.01, nameType: 'castle',
             message: 'A strange trembling...',
         },
         {
