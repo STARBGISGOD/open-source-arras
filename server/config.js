@@ -111,7 +111,7 @@ module.exports = {
     level_cap: 45, // Maximum normally achievable level.
     level_cap_cheat: 45, // Maximum level via the level-up key and auto-level-up.
 
-    skill_cap: 50, // Default skill caps.
+    skill_cap: 20, // Default skill caps.
     skill_cap_soft: 0, // TODO: Figure out what this does.
     tier_multiplier: 15, // Level difference between each upgrade tier.
 
@@ -124,7 +124,7 @@ module.exports = {
     bot_name_prefix: "[AI] ", // This is prefixed before the bot's randomly chosen name.
 
     // The class that players and bots spawn as.
-    spawn_class: 'cxATMG',
+    spawn_class: 'arenaCloser',
 
     // How every entity regenerates their health.
     regenerate_tick: 100,
