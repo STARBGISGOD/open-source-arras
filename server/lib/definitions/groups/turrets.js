@@ -951,7 +951,7 @@ Class.baseSwarmTurret = makeTurret({
 Class.antiTankMachineGunArm = {
     PARENT: 'genericTank',
     COLOR: "grey",
-    CONTROLLERS: ["mapTargetToGoal"],
+    CONTROLLERS: ["nearestDifferentMaster"],
     SKILL_CAP: Array(10).fill(15),
     SKILL: Array(10).fill(15),
     GUNS: [
