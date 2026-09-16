@@ -410,6 +410,7 @@ Class.bullet = {
     },
     FACING_TYPE: "smoothWithMotion",
     CAN_GO_OUTSIDE_ROOM: true,
+    IS_IMMUNE_TO_TILES: true,
     HITS_OWN_TYPE: "never",
     DIE_AT_RANGE: true,
 };
