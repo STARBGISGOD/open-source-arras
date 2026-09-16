@@ -280,7 +280,7 @@ Class.nonagon = {
         HEALTH: 1e50,
         RESIST: Math.pow(1.25, 3),
         PENETRATION: 1.1,
-        SHIELD: 70 * basePolygonHealth,
+        SHIELD: 7e30,
         ACCELERATION: 0.0025
     },
     DRAW_HEALTH: true,
