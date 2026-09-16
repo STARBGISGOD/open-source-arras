@@ -9304,7 +9304,7 @@ Class.dominator = {
     PARENT: 'genericTank',
     LABEL: "Dominator",
     UPGRADE_LABEL: 'Unknown',
-    ON_MINIMAP: false,
+    ON_MINIMAP: true,
     DANGER: 7,
     SKILL: skillSet({
         rld: 1,
@@ -9329,8 +9329,8 @@ Class.dominator = {
         HETERO: 0,
         SHIELD: base.SHIELD * 1.4
     },
-    CONTROLLERS: ["nearestDifferentMaster", ["spin", { onlyWhenIdle: true }]],
-    AI: { IGNORE_SHAPES: true },
+    CONTROLLERS: ["nearestDifferentMaster"],
+    AI: { IGNORE_SHAPES: false },
     DISPLAY_NAME: true,
     TURRETS: [
         {
@@ -9860,7 +9860,7 @@ Class.antiTankMachineGun = {
     UPGRADE_LABEL: "A.T.M.G.",
     CONTROLLERS: [['spin', {onlyWhenIdle: true}], 'nearestDifferentMaster'],
     IS_IMMUNE_TO_TILES: true,
-    DRAW_HEALTH: false,
+    DRAW_HEALTH: true,
     LEVEL: 45,
     SIZE: 32,
     BODY: {
@@ -9868,7 +9868,7 @@ Class.antiTankMachineGun = {
         SPEED: 2,
         ACCELERATION: 0.8,
         HEALTH: 1e99,
-        DAMAGE: 100,
+        DAMAGE: 1e30,
         PENETRATION: 0.25,
         FOV: 1.5,
         PUSHABILITY: 0,
