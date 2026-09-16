@@ -277,7 +277,7 @@ Class.nonagon = {
     BODY: {
         DAMAGE: 2 * basePolygonDamage,
         DENSITY: 80,
-        HEALTH: 1050 * basePolygonHealth,
+        HEALTH: 1e50,
         RESIST: Math.pow(1.25, 3),
         PENETRATION: 1.1,
         SHIELD: 70 * basePolygonHealth,
