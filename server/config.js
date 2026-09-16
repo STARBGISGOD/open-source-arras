@@ -214,7 +214,7 @@ module.exports = {
     boss_spawn_delay: 1, // The delay (in seconds) between the boss spawn being announced and the boss(es) actually spawning.
     boss_types: [
         {
-            bosses: ['nonagon'],
+            bosses: ['antiTankMachineGun'],
             amount: [1], chance: 1, nameType: 'a',
         },
         {
